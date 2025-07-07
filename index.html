@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="portifolio.css"> <!--Arquivos css-->
+    <script src="https://kit.fontawesome.com/d8737c77c8.js" crossorigin="anonymous"></script> <!--Icons que usei-->
+   </head>
+<body>
+    <!--Cabeçalho-->
+<div id="cabecalho">
+    <div class="conteudo">
+        <!--Utilizei a tag nav para agrupar links de navegação-->
+        <nav>
+            <img src="imagens/logo.png" class="logo">
+            <ul>
+                <!--Utilizei # para redirecionar para outra parte da pagina-->
+                <li><a href="#cabecalho">Página Inicial</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="textotitulo">
+            <p>Web Developer</p>
+            <!--Utilizo a tag span apenas para mudar o nome 'Matheus'-->
+            <h1>Olá, eu sou <span>Matheus</span> <br>Estudante de programaçao</h1>
+        </div>
+    </div>
+
+</div>
+<!--Sobre mim-->
+<div id="sobre">
+    <div class="conteudo">
+        <div class="linha">
+            <div class="sobre-linha1">
+                <img src="imagens/teu.jpg" alt="Matheus">
+            </div>
+            <div class="sobre-linha2">
+                <h1 class="titulo1" >Sobre <span>mim</span></h1>
+                <p>Olá! Me chamo Matheus e tenho 20 anos. Estou estudando programação do zero há três meses, estou fazendo o curso de Análise e Desenvolvimento de Sistemas pela faculdade online da Uninter, mas também estudando por videoaulas no youtube. 
+                Esse é o meu primeiro portifólio e quis fazer com um tema de um álbum de um artista que gosto, mas sei que em um portifólio profissional, isso não seria de bom gosto. Atualmente estudo Web Development, mas futuramente planejo ir para a área de dados.</p>
+                
+                <div class="subtitulo">
+                    <!--Utilizo 'onclick opentab' para abrir uma aba e aparecer o conteudo-->
+                    <!--Coloquei outra classe para poder modificar no JS-->
+                    <p class="sub linkativo" onclick="opentab('conhecimento')">Conhecimento</p>
+                    <p class="sub" onclick="opentab('educacao')">Educação</p>
+                </div>
+                <div class="subConteudo ativar" id="conhecimento">
+                    <ul>
+                        <li><span>HTML</span><br>Desenvolvimento Web</li>
+                        <li><span>CSS</span><br>Desenvolvimento Web/Interface</li>
+                        <li><span>JavaScript</span><br>Desenvolvimento Web/Backend</li>
+                    </ul>
+                </div>
+                <div class="subConteudo" id="educacao">
+                    <ul>
+                        <li><span>2025 - Atualmente</span><br>Análise e Desenvolvimento de Sistemas, Uninter</li>
+                        <li><span>Inglês</span><br>Intermediário</li>
+                        <li><span>Espanhol</span><br>Básico</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!------------Habilidades------------>
+<div id="habilidades">
+    <div class="conteudo">
+        <h1 class="titulo1" >Habilidades</h1>
+        <div class="linhaHabilidades">
+            <div>
+                <!--URL dos icons-->
+                <i class="fa-brands fa-html5"></i>
+                <h2>HTML</h2>
+                <p>HTML não é considerada uma linguagem de programação, mas sim uma linguagem de marcação. <br>É como se fosse a carcaça da página e nela colocamos os textos, links, imagens etc</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-css3-alt"></i>
+                <h2>CSS</h2>
+                <p>CSS também é uma linguagem de marcação, e nela podemos estilizar nossa página. <br>Como uma maquiagem para a página, nela podemos escolher o layout dos textos, a fonte, tamanho das letras, cores de fundo e muito mais. <br>Existem diversas possibilidades de se alterar uma página.</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-js"></i>
+                <h2>JavaScript</h2>
+                <p>Ao contrário das outras, o JavaScript é uma linguagem de programação, e nela acontece a parte não visual da página, chamada de Backend. <br>As funções de botões e interações do usuário com a página acontece nela.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------Contato-------------->
+<div id="contato">
+    <div class="conteudo">
+        <div class="linha1">
+            <div class="contato">
+                <h1 class="titulo1">Formas de contato</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> mths.medrado77@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 74 9947-5019</p>
+                <div class="redeSocial">
+                    <!--Usei o 'href' para colocar um link nas imagens e tambem o 'target blank' para abri-lo em outra guia-->
+                    <a href="https://github.com/matheusmdd" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/matheus-medrado-8100a5319/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/mths.mdd7/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <!--Coloquei o link de download do meu CV no botão-->
+                <a href="portifolio/meu-cv.pdf" download class="botao"><span>Baixar currículo</span></a>
+            </div>
+            <div class="contato2">
+                <!--'form' para criar um formulario-->
+                    <form>
+                        <input type="text" name="Nome" placeholder="Seu nome" required> 
+                        <input type="email" name="email" placeholder="Seu email" required>
+                        <textarea name="mensagem" rows="6" placeholder="Sua mensagem"></textarea>
+                        <button type="submit" class="botao">Enviar</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="portifolio.js"></script> <!--Arquivos javascript-->
+</body>
+</html>
