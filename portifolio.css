@@ -1,0 +1,223 @@
+*{ /*seletor universal*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background: black; /*cor do fundo da pagina*/
+    color: rgb(255, 255, 255); /*cor padrão do texto*/
+}
+#cabecalho{
+    width: 100%;/*para o cabeçalho prencher toda tela horizontalmente*/
+    height: 100vh;
+    background-image: url(imagens/WLR_DEFAULT.png);
+    background-size: contain; /*para imagem se ajustar corretamente*/
+    background-position: right;
+    background-repeat: no-repeat; /* para imagem não se repetir*/
+}
+.logo{
+    width: 18%;
+    
+}
+.conteudo{
+    padding: 10px 10%; /*adiciona um espaçamento interno em cima, e dos lados*/
+}
+nav{
+    display: flex; /*para facilitar a mudar o posicionamento da lista*/
+    align-items: center; /*deixa o conteudo no centro*/ 
+    justify-content: space-between; /*deixa um espaço da logo com o conteudo*/
+}
+nav ul li{
+    display: inline-block;/*para que a lista fique na mesma linha*/
+    list-style: none;/*deixar apenas o nome dos itens*/
+    margin: 10px 20px;
+}
+nav ul li a{   
+    color: azure;
+    text-decoration: none;/*tirei a linha do texto*/
+    font-size: 18px;/*tamanho da fonte*/
+    position: relative;/*sobre a linha embaixo do link que so aparece quando o cursor do mouse esta em cima*/
+}
+nav ul li a::after{ 
+    content: ''; /*conteudo fica vazio ate ser preenchido com a linha depois*/
+    width: 0%; /*no começo tem largura 0*/
+    height: 3px; /*a linha vai ter 3 pixels de altura*/
+    background: rgb(211, 10, 10); /*cor da linha*/
+    position: absolute; /*posicionei a linha sem afetar os outros item*/
+    left: 0; /*começa na esquerda*/
+    bottom: -6px; /*fica 6 pixels abaixo*/
+    transition: 0.5s;/*tempo da transição da linha ate aparecer completamente*/
+}
+nav ul li a:hover::after{ /*Quando passar o mouse por cima aparece a linha vermelha*/
+    width: 100px;
+}
+.textotitulo{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.textotitulo h1{ /*mudando apenas o titulo*/
+    font-size: 60px;
+    margin-top: 20px;
+}
+.textotitulo p{ /*o paragrafo maarcado*/
+    font-size: 25px;
+    color: rgb(211, 10, 10);;
+}
+.textotitulo h1 span{ /*apenas o nome selecionado*/
+    color: rgb(211, 10, 10);
+}
+/*-------Sobre mim--------*/
+
+#sobre{
+    padding: 80px 0px;
+    color: white;   
+}
+.linha{
+    display: flex;
+    justify-content: space-between;
+}
+.sobre-linha1{
+    flex-basis: 35%; /*para ocupar apenas 35% do espaço disponivel*/
+}
+.sobre-linha1 img{ /*propriedades da imagem*/
+    width: 80%;
+    border-radius: 15px; /*a borda da imagem*/
+    }
+.sobre-linha2{
+    flex-basis: 60%;
+}
+.titulo1{
+    font-size: 60px;
+    font-weight: 600; /*o preenchimento do texto*/
+    color: white;
+}
+.titulo1 span{
+    color: rgb(211, 10, 10); 
+}
+.sobre-linha2 p{
+    color: white;
+}
+.subtitulo{
+    display: flex;
+    margin: 20px 0 40px; /*20px para cima, 0 pros lados e 40px embaixo*/
+}
+.sub{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer; /*muda o cursor do mouse*/
+    position: relative; /*faz com que a linha fique ativa enquanto estiver na tabela*/
+}
+.sub::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(211, 10, 10) ;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.sub:hover::after{
+    width: 50px;
+}
+.sub.linkativo::after{
+    width: 50px;
+
+}
+.subConteudo ul li{
+    list-style: none; /*deixa apenas o nome*/
+    margin: 10px 0; /*espaço em cima e embaixo*/
+}
+.subConteudo ul li span{ /*apenas pros nomes na tag span*/
+    color:rgb(211, 10, 10);
+    font-size: 14px;
+}
+.subConteudo{ /*deixa o conteudo escondido*/
+    display: none;
+}
+.subConteudo.ativar{ /*o conteudo aparece quando clica*/
+    display: block;
+}
+/*-----------Habilidades----------*/
+#habilidades{
+    padding: 30px 0;
+}
+
+.linhaHabilidades { 
+    display: grid; /*para o conteudo ficar visivel em colunas*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*repeat para criar um padrão, autofit para encaixar automaticamente, no minimo 250px e 1fr para definir um espaço disponivel de acordo com a tela*/
+    grid-gap: 40px; /*espaço entre as grades*/
+    margin-top: 50px;
+}
+
+.linhaHabilidades div{ /*cor de fundo das grades*/
+    background: #1a1818;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 15px;
+    transition: 0.5s; /*transição de uma nova cor quando o mouse esta em cima*/
+}
+.linhaHabilidades div i{ /*propriedades das imagens*/
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.linhaHabilidades div:hover{ 
+    background: rgb(211, 10, 10);/*adiciona uma nova cor quando o mouse esta em cima*/
+    transform: translateY(-10px); /*a grade se move 10px pra cima*/
+}
+/*-----------Contato-------------*/
+
+.redeSocial i{
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 30px;
+    color: rgb(211, 10, 10);
+}
+.contato{
+    flex-basis: 35%;
+}
+.contato2{
+    flex-basis: 60%;
+}
+.contato p i{ /*espaço e a cor das imagens*/
+    margin-top: 30px;
+    color: rgb(211, 10, 10);
+}
+.redeSocial i:hover{ /*quando o mouse esta em cima a cor muda levemente e a imagem sobe 5px*/
+    transform: translateY(-5px);
+    transition: 0.5s;
+    color:red;
+}
+.botao{
+    display: inline-block; /*para modificar a posição do botão*/
+    margin: 50px auto; /*50px pra cima e auto pra centralizar*/
+    width: fit-content; /*para a largura do botão se ajustar com o conteudo*/
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none; /*tirar a linha*/
+    color: #1a1818; /*cor padrão do botao*/
+    border: solid 1px rgb(211, 10, 10); /*adicionei uma borda*/
+    transition: background 0.5s; /*para mudar a cor de fundo do botao quando o mouse estiver em cima*/
+}
+.botao span{ /*cor do texto*/
+    color: white;
+}
+.botao:hover{
+    background: rgb(211, 10, 10);
+}
+.contato2 form{ /*ocupa todo o espaço da coluna*/
+    width: 100%;
+}
+form input, form textarea{ /*para mudar todos os campos do formulario*/
+    width: 100%;
+    border: 0; /*para retirar a borda*/
+    outline: none; /*remove o contorno quando clica no campo*/
+    background: #1a1818; /*cor de fundo*/
+    padding: 15px;
+    margin: 15px 0; /*15px em cima e embaixo e 0 nas laterais*/
+    color: white; /*cor da letra*/
+    font-size: 18px;
+    border-radius: 15px; /*borda arredondada*/
+}
